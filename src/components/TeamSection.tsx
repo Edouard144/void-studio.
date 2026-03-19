@@ -1,7 +1,7 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { Github, MessageCircle } from "lucide-react";
-import teamEdouard from "@/assets/team-edouard.jpg";
+import teamEdouard from "@/assets/edouard.png";
 import teamTehila from "@/assets/team-tehila.jpg";
 import teamGeofrey from "@/assets/team-geofrey.jpg";
 import teamHerve from "@/assets/team-herve.jpg";

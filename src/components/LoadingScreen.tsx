@@ -38,7 +38,7 @@ const LoadingScreen = ({ onComplete }: { onComplete: () => void }) => {
               animate={{ opacity: phase >= 1 ? 1 : 0 }}
               transition={{ duration: 0.6 }}
             >
-              VSTUDIO
+               VOID STUDIO
             </motion.h1>
             <motion.div
               className="mx-auto mt-4 gold-line"
