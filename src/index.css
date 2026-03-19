@@ -1,96 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=JetBrains+Mono:wght@300;400;500&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
-
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 228 43% 3%;
+    --foreground: 240 10% 93%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 220 43% 6%;
+    --card-foreground: 240 10% 93%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 220 43% 6%;
+    --popover-foreground: 240 10% 93%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 45 56% 52%;
+    --primary-foreground: 228 43% 3%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --primary-glow: 42 80% 60%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --secondary: 220 30% 10%;
+    --secondary-foreground: 240 10% 93%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --muted: 220 20% 14%;
+    --muted-foreground: 220 10% 45%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --accent: 220 30% 10%;
+    --accent-foreground: 240 10% 93%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
 
-    --radius: 0.5rem;
+    --border: 218 30% 16%;
+    --input: 218 30% 16%;
+    --ring: 45 56% 52%;
 
-    --sidebar-background: 0 0% 98%;
+    --radius: 0px;
 
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --surface: 220 43% 8%;
+    --dim: 220 10% 42%;
+    --success: 160 90% 42%;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --background: 228 43% 3%;
+    --foreground: 240 10% 93%;
   }
 }
 
@@ -101,5 +56,192 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 18px;
+    line-height: 1.8;
+    overflow-x: hidden;
   }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Cinzel', serif;
+    letter-spacing: 0.1em;
+    line-height: 1.2;
+  }
+}
+
+@layer components {
+  .font-display {
+    font-family: 'Cinzel', serif;
+    letter-spacing: 0.1em;
+  }
+
+  .font-body {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+  }
+
+  .font-mono-accent {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    letter-spacing: 0.05em;
+  }
+
+  .text-gold {
+    color: hsl(var(--primary));
+  }
+
+  .text-gold-glow {
+    color: hsl(var(--primary-glow));
+  }
+
+  .text-soft {
+    color: hsl(var(--foreground));
+  }
+
+  .text-dim {
+    color: hsl(var(--dim));
+  }
+
+  .bg-deep {
+    background-color: hsl(var(--background));
+  }
+
+  .bg-panel {
+    background-color: hsl(var(--card));
+  }
+
+  .bg-surface {
+    background-color: hsl(var(--surface));
+  }
+
+  .border-gold {
+    border-color: hsl(var(--primary));
+  }
+
+  .border-subtle {
+    border-color: hsl(var(--border));
+  }
+
+  .gold-line {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, hsl(var(--primary)), transparent);
+  }
+
+  .gold-line-left {
+    height: 1px;
+    background: linear-gradient(90deg, hsl(var(--primary)), transparent);
+  }
+
+  .section-padding {
+    @apply py-20 md:py-28 lg:py-32;
+  }
+
+  .container-void {
+    @apply max-w-[1200px] mx-auto px-5 md:px-8;
+  }
+
+  .card-void {
+    @apply bg-panel border border-subtle transition-all duration-500;
+  }
+
+  .card-void:hover {
+    border-color: hsl(var(--primary));
+    box-shadow: 0 0 30px -10px hsl(var(--primary) / 0.15);
+  }
+
+  .btn-gold {
+    @apply font-display text-gold border border-gold px-8 py-3 text-sm tracking-[0.15em] uppercase transition-all duration-300 relative overflow-hidden;
+  }
+
+  .btn-gold::before {
+    content: '';
+    @apply absolute inset-0 transition-transform duration-300;
+    background: hsl(var(--primary));
+    transform: translateX(-100%);
+  }
+
+  .btn-gold:hover::before {
+    transform: translateX(0);
+  }
+
+  .btn-gold:hover {
+    color: hsl(var(--background));
+  }
+
+  .btn-gold span {
+    @apply relative z-10;
+  }
+
+  .btn-white {
+    @apply font-display text-foreground border border-foreground/30 px-8 py-3 text-sm tracking-[0.15em] uppercase transition-all duration-300 relative overflow-hidden;
+  }
+
+  .btn-white::before {
+    content: '';
+    @apply absolute inset-0 transition-transform duration-300;
+    background: hsl(var(--foreground));
+    transform: translateX(-100%);
+  }
+
+  .btn-white:hover::before {
+    transform: translateX(0);
+  }
+
+  .btn-white:hover {
+    color: hsl(var(--background));
+  }
+
+  .btn-white span {
+    @apply relative z-10;
+  }
+
+  .badge-void {
+    @apply font-mono-accent px-3 py-1 border border-gold text-gold uppercase;
+  }
+}
+
+/* Background breathing animation */
+@keyframes breathe {
+  0%, 100% { background-color: hsl(228, 43%, 3%); }
+  50% { background-color: hsl(220, 43%, 5%); }
+}
+
+.bg-breathe {
+  animation: breathe 8s ease-in-out infinite;
+}
+
+/* Gold line draw animation */
+@keyframes drawLine {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+
+.gold-draw {
+  transform-origin: left;
+  animation: drawLine 0.8s ease-out forwards;
+}
+
+/* Scroll progress bar */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 2px;
+  background: linear-gradient(90deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+  z-index: 9999;
+  transition: width 0.1s linear;
+}
+
+/* Custom cursor */
+@media (pointer: fine) {
+  .custom-cursor {
+    cursor: none;
+  }
+}
+
+/* Subtle gold grid pattern */
+.gold-grid-bg {
+  background-image: 
+    linear-gradient(hsl(var(--primary) / 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, hsl(var(--primary) / 0.03) 1px, transparent 1px);
+  background-size: 60px 60px;
 }

@@ -1,16 +1,55 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { useState, useCallback } from "react";
+import LoadingScreen from "@/components/LoadingScreen";
+import Navbar from "@/components/Navbar";
+import HeroSection from "@/components/HeroSection";
+import AboutSection from "@/components/AboutSection";
+import TrustBadges from "@/components/TrustBadges";
+import ServicesSection from "@/components/ServicesSection";
+import PortfolioSection from "@/components/PortfolioSection";
+import CaseStudiesSection from "@/components/CaseStudiesSection";
+import ProcessSection from "@/components/ProcessSection";
+import CommitmentSection from "@/components/CommitmentSection";
+import TeamSection from "@/components/TeamSection";
+import PricingSection from "@/components/PricingSection";
+import TestimonialsSection from "@/components/TestimonialsSection";
+import FAQSection from "@/components/FAQSection";
+import BlogSection from "@/components/BlogSection";
+import ContactSection from "@/components/ContactSection";
+import Footer from "@/components/Footer";
+import FloatingElements from "@/components/FloatingElements";
 
-// IMPORTANT: Fully REPLACE this with your own code
-const PlaceholderIndex = () => {
-  // PLACEHOLDER: Replace this entire return statement with the user's app.
-  // The inline background color is intentionally not part of the design system.
+const Index = () => {
+  const [loaded, setLoaded] = useState(false);
+  const handleComplete = useCallback(() => setLoaded(true), []);
+
   return (
-    <div className="flex min-h-screen items-center justify-center" style={{ backgroundColor: '#fcfbf8' }}>
-      <img data-lovable-blank-page-placeholder="REMOVE_THIS" src="/placeholder.svg" alt="Your app will live here!" />
-    </div>
+    <>
+      <LoadingScreen onComplete={handleComplete} />
+      {loaded && (
+        <div className="bg-breathe">
+          <Navbar />
+          <FloatingElements />
+          <main>
+            <HeroSection />
+            <AboutSection />
+            <TrustBadges />
+            <ServicesSection />
+            <PortfolioSection />
+            <CaseStudiesSection />
+            <ProcessSection />
+            <CommitmentSection />
+            <TeamSection />
+            <PricingSection />
+            <TestimonialsSection />
+            <FAQSection />
+            <BlogSection />
+            <ContactSection />
+          </main>
+          <Footer />
+        </div>
+      )}
+    </>
   );
 };
-
-const Index = PlaceholderIndex;
 
 export default Index;
