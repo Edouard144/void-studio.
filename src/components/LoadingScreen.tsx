@@ -23,14 +23,22 @@ const LoadingScreen = ({ onComplete }: { onComplete: () => void }) => {
           exit={{ opacity: 0 }}
           transition={{ duration: 0.4 }}
         >
-          <div className="text-center">
+          <div className="text-center flex flex-col items-center">
+            <motion.img
+              src="/logoonloading.png"
+              alt="vStudio Logo"
+              className="w-32 md:w-48 h-auto mb-6"
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: phase >= 1 ? 1 : 0, scale: phase >= 1 ? 1 : 0.8 }}
+              transition={{ duration: 0.6 }}
+            />
             <motion.h1
               className="font-display text-3xl md:text-5xl tracking-[0.2em] text-foreground"
               initial={{ opacity: 0 }}
               animate={{ opacity: phase >= 1 ? 1 : 0 }}
               transition={{ duration: 0.6 }}
             >
-              VOID STUDIO
+              VSTUDIO
             </motion.h1>
             <motion.div
               className="mx-auto mt-4 gold-line"
