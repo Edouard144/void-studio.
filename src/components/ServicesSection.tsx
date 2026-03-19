@@ -46,7 +46,7 @@ const ServicesSection = () => {
                 <span className="badge-void text-[11px]">{service.tag}</span>
               </div>
               <h3 className="font-display text-xl text-foreground tracking-wide">{service.title}</h3>
-              <p className="font-body text-dim mt-3 text-base leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+              <p className="font-body text-dim mt-3 text-base leading-relaxed">
                 {service.desc}
               </p>
             </motion.div>
