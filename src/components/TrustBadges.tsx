@@ -2,7 +2,7 @@ import { motion, useInView } from "framer-motion";
 import { useRef, useEffect, useState } from "react";
 
 const badges = [
-  { num: 10, suffix: "+", label: "Projects Delivered" },
+  { num: 15, suffix: "+", label: "Projects Delivered" },
   { num: 5, suffix: "", label: "Specialist Engineers" },
   { num: 3, suffix: "", label: "Years Building" },
   { num: 100, suffix: "%", label: "Completion Rate" },
