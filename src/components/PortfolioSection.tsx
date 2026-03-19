@@ -1,13 +1,14 @@
 import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
+import stayAwakeImg from "@/assets/StayAwake.png";
 
 const projects = [
-  { name: "SmartSCCO", category: "Fintech // Web Application", tag: "FULLSTACK", desc: "Complete digital banking platform for savings cooperatives — loans, wallets, fraud detection.", stack: "Express.js // PostgreSQL // React // TypeScript", status: "LIVE" },
-  { name: "UmurageTrust", category: "Real Estate // Marketplace", tag: "FULLSTACK", desc: "Premium real estate marketplace connecting buyers and sellers across Rwanda.", stack: "Node.js // PostgreSQL // Next.js", status: "LIVE" },
-  { name: "MediSafe", category: "Healthcare // Management", tag: "BACKEND", desc: "Hospital management system digitizing patient records, appointments and billing.", stack: "Node.js // PostgreSQL // React", status: "LIVE" },
-  { name: "StayAwake", category: "Developer Tools // SaaS", tag: "FULLSTACK", desc: "Server-side uptime tool keeping free-tier hosted sites alive 24/7.", stack: "Node.js // NeonDB // node-cron", status: "LIVE" },
-  { name: "EDRIX Mission Control", category: "DevOps // Dashboard", tag: "FULLSTACK", desc: "Multi-tenant DevOps dashboard with webhooks, analytics, job tracking and billing.", stack: "React 18 // TypeScript // Node.js // SQLite", status: "LIVE" },
-  { name: "Coming Soon", category: "Classified", tag: "VOID STUDIO", desc: "Our next deployment is in progress. Something extraordinary is being built.", stack: "[CLASSIFIED]", status: "IN PROGRESS" },
+  { name: "SmartSCCO", category: "Fintech // Web Application", tag: "FULLSTACK", desc: "Complete digital banking platform for savings cooperatives — loans, wallets, fraud detection.", stack: "Express.js // PostgreSQL // React // TypeScript", status: "LIVE", image: null },
+  { name: "UmurageTrust", category: "Real Estate // Marketplace", tag: "FULLSTACK", desc: "Premium real estate marketplace connecting buyers and sellers across Rwanda.", stack: "Node.js // PostgreSQL // Next.js", status: "LIVE", image: null },
+  { name: "MediSafe", category: "Healthcare // Management", tag: "BACKEND", desc: "Hospital management system digitizing patient records, appointments and billing.", stack: "Node.js // PostgreSQL // React", status: "LIVE", image: null },
+  { name: "StayAwake", category: "Developer Tools // SaaS", tag: "FULLSTACK", desc: "Server-side uptime tool keeping free-tier hosted sites alive 24/7.", stack: "Node.js // NeonDB // node-cron", status: "LIVE", image: stayAwakeImg },
+  { name: "EDRIX Mission Control", category: "DevOps // Dashboard", tag: "FULLSTACK", desc: "Multi-tenant DevOps dashboard with webhooks, analytics, job tracking and billing.", stack: "React 18 // TypeScript // Node.js // SQLite", status: "LIVE", image: null },
+  { name: "Coming Soon", category: "Classified", tag: "VOID STUDIO", desc: "Our next deployment is in progress. Something extraordinary is being built.", stack: "[CLASSIFIED]", status: "IN PROGRESS", image: null },
 ];
 
 const filters = ["ALL", "FULLSTACK", "BACKEND", "MOBILE", "DESIGN"];
@@ -60,7 +61,11 @@ const PortfolioSection = () => {
             >
               {/* Placeholder image area */}
               <div className="relative h-48 bg-surface flex items-center justify-center overflow-hidden">
-                <span className="font-display text-xl text-primary/30 tracking-widest">{project.name}</span>
+                {project.image ? (
+                  <img src={project.image} alt={project.name} className="w-full h-full object-cover" />
+                ) : (
+                  <span className="font-display text-xl text-primary/30 tracking-widest">{project.name}</span>
+                )}
                 <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/10 transition-all duration-500" />
                 {project.status === "IN PROGRESS" && (
                   <div className="absolute inset-0 border-2 border-primary/30 animate-pulse" />
