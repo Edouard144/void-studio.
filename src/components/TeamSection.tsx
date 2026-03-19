@@ -42,11 +42,8 @@ const TeamSection = () => {
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: 0.1 * i }}
             >
-              {/* Hexagonal avatar placeholder */}
-              <div className="w-20 h-20 mx-auto mb-4 border-2 border-primary/30 group-hover:border-primary rounded-full flex items-center justify-center transition-all duration-500 bg-surface">
-                <span className="font-display text-lg text-primary">
-                  {member.name.split(" ").map(n => n[0]).join("").slice(0, 2)}
-                </span>
+              <div className="w-20 h-20 mx-auto mb-4 border-2 border-primary/30 group-hover:border-primary rounded-full overflow-hidden transition-all duration-500">
+                <img src={member.image} alt={member.name} className="w-full h-full object-cover" />
               </div>
               <h3 className="font-display text-sm text-foreground tracking-wider">{member.name}</h3>
               <p className="font-mono-accent text-primary mt-1 text-[11px]">{member.role}</p>
