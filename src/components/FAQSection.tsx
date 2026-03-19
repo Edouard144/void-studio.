@@ -3,7 +3,7 @@ import { useRef, useState } from "react";
 import { Plus, Minus } from "lucide-react";
 
 const faqs = [
-  { q: "How long does a typical project take?", a: "Depends on scope. A focused landing page takes 1–2 weeks. A full web application takes 4–8 weeks. An enterprise system can take 8–12 weeks. We give you a precise timeline in the project brief before work begins — and we stick to it." },
+  { q: "How long does a typical project take?", a: "Depends on scope. A focused landing page takes not longer than 1 week. A full web application takes 2–3 weeks. An enterprise system can take 4–8 weeks. We give you a precise timeline in the project brief before work begins — and we stick to it." },
   { q: "Do you work with international clients?", a: "Absolutely. We work with clients globally. All communication is in English (and French on request). Payments accepted internationally via bank transfer or mobile money." },
   { q: "What is your payment structure?", a: "50% to initiate the project. 50% on delivery and your approval. No full upfront payment. No payment before you are satisfied with the final result." },
   { q: "Who owns the code after delivery?", a: "You do. 100%. On final payment, all source code, assets, and intellectual property transfer entirely to you. No licensing fees. No ongoing payments. No lock-in." },
