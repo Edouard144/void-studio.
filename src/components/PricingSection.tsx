@@ -7,7 +7,7 @@ const tiers = [
     name: "SURFACE",
     price: "$300 – $800",
     label: "For focused, well-defined projects",
-    timeline: "2–3 weeks",
+    timeline: "1–2 weeks",
     popular: false,
     features: [
       "Discovery call + project brief",
@@ -23,7 +23,7 @@ const tiers = [
     name: "DEEP",
     price: "$900 – $1,500",
     label: "For complete product builds",
-    timeline: "4–6 weeks",
+    timeline: "2–3 weeks",
     popular: true,
     features: [
       "Everything in SURFACE",
@@ -41,7 +41,7 @@ const tiers = [
     name: "ABYSS",
     price: "$1,600 – $3,000",
     label: "For enterprise and complex systems",
-    timeline: "8–12 weeks",
+    timeline: "3–4 weeks",
     popular: false,
     features: [
       "Everything in DEEP",

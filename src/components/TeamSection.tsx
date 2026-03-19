@@ -48,7 +48,7 @@ const TeamSection = () => {
               </div>
               <h3 className="font-display text-sm text-foreground tracking-wider">{member.name}</h3>
               <p className="font-mono-accent text-primary mt-1 text-[11px]">{member.role}</p>
-              <p className="font-body text-dim text-sm mt-3 opacity-0 group-hover:opacity-100 transition-opacity duration-500 italic">
+              <p className="font-body text-dim text-sm mt-3 italic">
                 "{member.tagline}"
               </p>
               <div className="flex flex-wrap justify-center gap-1 mt-auto">
