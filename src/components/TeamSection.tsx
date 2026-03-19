@@ -1,5 +1,6 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import { Github, MessageCircle } from "lucide-react";
 import teamEdouard from "@/assets/team-edouard.jpg";
 import teamTehila from "@/assets/team-tehila.jpg";
 import teamGeofrey from "@/assets/team-geofrey.jpg";
@@ -7,11 +8,11 @@ import teamHerve from "@/assets/team-herve.jpg";
 import teamBright from "@/assets/team-bright.jpg";
 
 const team = [
-  { name: "TUYUBAHE Edouard", role: "Mobile & Backend Developer", tagline: "Architects the systems that power everything you see.", skills: "Node.js // Express.js // React Native // PostgreSQL", image: teamEdouard },
-  { name: "RUZINDANA Tehila", role: "Frontend Developer & Designer", tagline: "Transforms complex ideas into interfaces people love.", skills: "React.js // Next.js // Figma // Tailwind CSS", image: teamTehila },
-  { name: "KAYINAMURA K. Geofrey", role: "Senior Backend Developer", tagline: "Engineers the infrastructure that never breaks.", skills: "Java // Spring Boot // PostgreSQL // System Design", image: teamGeofrey },
-  { name: "NDIZEYE Herve", role: "Frontend, 3D & Design", tagline: "Brings the third dimension to every digital experience.", skills: "Three.js // Blender // React // UI/UX Design", image: teamHerve },
-  { name: "SUN Bright", role: "DevOps & Cloud Engineer", tagline: "Ensures every system we build runs flawlessly at scale.", skills: "Docker // AWS // CI/CD // Linux // Kubernetes", image: teamBright },
+  { name: "KAYINAMURA K. Geofrey", role: "Senior Backend Developer", tagline: "Engineers the infrastructure that never breaks.", skills: "Springboot // PostgreSQL // neonDB // Express.js // Node.js // Java // Django // Python", image: teamGeofrey, github: "#", whatsapp: "#" },
+  { name: "NDIZEYE Herve", role: "Embedded Systems Architect", tagline: "Brings the third dimension to every digital experience.", skills: "Embedded Systems Architecture // Blender // PhotoShop // Logo Design // UI/UX Design", image: teamHerve, github: "#", whatsapp: "#" },
+  { name: "RUZINDANA Tehila", role: "Frontend Developer & Designer", tagline: "Transforms complex ideas into interfaces people love.", skills: "React.js // Next.js // Figma // Tailwind CSS", image: teamTehila, github: "#", whatsapp: "#" },
+  { name: "SUN Bright", role: "DevOps & Cloud Engineer", tagline: "Ensures every system we build runs flawlessly at scale.", skills: "Docker // AWS // CI/CD // Linux // Kubernetes", image: teamBright, github: "#", whatsapp: "#" },
+  { name: "TUYUBAHE Edouard", role: "Mobile & Backend Developer", tagline: "Architects the systems that power everything you see.", skills: "Node.js // Express.js // React.js // React Native // Swift // WordPress // PostgreSQL // MongoDB", image: teamEdouard, github: "#", whatsapp: "#" },
 ];
 
 const TeamSection = () => {
@@ -37,7 +38,7 @@ const TeamSection = () => {
           {team.map((member, i) => (
             <motion.div
               key={member.name}
-              className="card-void p-6 group text-center"
+              className="card-void p-6 group text-center flex flex-col h-full"
               initial={{ opacity: 0, y: 30 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: 0.1 * i }}
@@ -50,10 +51,18 @@ const TeamSection = () => {
               <p className="font-body text-dim text-sm mt-3 opacity-0 group-hover:opacity-100 transition-opacity duration-500 italic">
                 "{member.tagline}"
               </p>
-              <div className="flex flex-wrap justify-center gap-1 mt-3">
+              <div className="flex flex-wrap justify-center gap-1 mt-auto">
                 {member.skills.split(" // ").map(s => (
                   <span key={s} className="font-mono-accent text-[9px] text-dim">{s}</span>
                 ))}
+              </div>
+              <div className="flex justify-center gap-3 mt-auto pt-3">
+                <a href={member.github} className="text-dim hover:text-primary transition-colors">
+                  <Github size={14} />
+                </a>
+                <a href={member.whatsapp} className="text-dim hover:text-primary transition-colors">
+                  <MessageCircle size={14} />
+                </a>
               </div>
             </motion.div>
           ))}

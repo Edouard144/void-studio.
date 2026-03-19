@@ -1,0 +1,168 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400">
+  <defs>
+
+    <!-- Gold gradient for the hexagon border -->
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   stop-color="#f0c040"/>
+      <stop offset="50%"  stop-color="#D4AF37"/>
+      <stop offset="100%" stop-color="#a07820"/>
+    </linearGradient>
+
+    <!-- Gold gradient for text -->
+    <linearGradient id="goldText" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#f0c040"/>
+      <stop offset="50%"  stop-color="#D4AF37"/>
+      <stop offset="100%" stop-color="#c09828"/>
+    </linearGradient>
+
+    <!-- Subtle inner glow for hexagon -->
+    <linearGradient id="innerGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   stop-color="#D4AF37" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#D4AF37" stop-opacity="0.02"/>
+    </linearGradient>
+
+    <!-- Clip path for the V cutout inside hexagon -->
+    <clipPath id="hexClip">
+      <!-- Hexagon shape for clipping -->
+      <polygon points="
+        200,60
+        260,95
+        260,165
+        200,200
+        140,165
+        140,95
+      "/>
+    </clipPath>
+
+  </defs>
+
+  <!-- ═══════════════════════════════════════
+       BACKGROUND — pure black
+  ═══════════════════════════════════════ -->
+  <rect width="800" height="400" fill="#03040a"/>
+
+  <!-- ═══════════════════════════════════════
+       HEXAGON MARK — the logo symbol
+       Centered at x=200, y=130 (middle of left half)
+  ═══════════════════════════════════════ -->
+
+  <!-- Outer hexagon — thick gold border -->
+  <polygon
+    points="200,52 268,91 268,169 200,208 132,169 132,91"
+    fill="url(#innerGlow)"
+    stroke="url(#goldGrad)"
+    stroke-width="2.5"
+    stroke-linejoin="round"
+  />
+
+  <!-- Second inner hexagon ring — thin, creates depth -->
+  <polygon
+    points="200,64 256,98 256,162 200,196 144,162 144,98"
+    fill="none"
+    stroke="#D4AF37"
+    stroke-width="0.6"
+    stroke-opacity="0.35"
+    stroke-linejoin="round"
+  />
+
+  <!-- V void cutout — the core mark inside the hexagon -->
+  <!-- This is the negative space "V" = VOID -->
+  <!-- Left arm of V -->
+  <polygon
+    points="162,85 185,85 200,148 185,148"
+    fill="#03040a"
+  />
+  <!-- Right arm of V -->
+  <polygon
+    points="215,85 238,85 215,148 200,148"
+    fill="#03040a"
+  />
+  <!-- Bottom point of V — sharp tip -->
+  <polygon
+    points="192,148 208,148 200,168"
+    fill="#03040a"
+  />
+
+  <!-- Thin gold lines tracing the V arms — precision detail -->
+  <!-- Left arm line -->
+  <line x1="166" y1="88"  x2="200" y2="162" stroke="#D4AF37" stroke-width="0.8" stroke-opacity="0.6"/>
+  <!-- Right arm line -->
+  <line x1="234" y1="88"  x2="200" y2="162" stroke="#D4AF37" stroke-width="0.8" stroke-opacity="0.6"/>
+
+  <!-- Corner accent marks — architectural detail on hexagon corners -->
+  <!-- Top corner -->
+  <line x1="196" y1="52" x2="204" y2="52" stroke="#D4AF37" stroke-width="1.5" stroke-linecap="round"/>
+  <!-- Bottom corner -->
+  <line x1="196" y1="208" x2="204" y2="208" stroke="#D4AF37" stroke-width="1.5" stroke-linecap="round"/>
+  <!-- Top-right corner -->
+  <line x1="265" y1="93"  x2="269" y2="100" stroke="#D4AF37" stroke-width="1.2" stroke-linecap="round"/>
+  <!-- Bottom-right corner -->
+  <line x1="265" y1="167" x2="269" y2="160" stroke="#D4AF37" stroke-width="1.2" stroke-linecap="round"/>
+  <!-- Top-left corner -->
+  <line x1="135" y1="93"  x2="131" y2="100" stroke="#D4AF37" stroke-width="1.2" stroke-linecap="round"/>
+  <!-- Bottom-left corner -->
+  <line x1="135" y1="167" x2="131" y2="160" stroke="#D4AF37" stroke-width="1.2" stroke-linecap="round"/>
+
+  <!-- ═══════════════════════════════════════
+       WORDMARK — VOID STUDIO
+       Positioned right of the hexagon mark
+  ═══════════════════════════════════════ -->
+
+  <!-- "VOID" — large, gold, wide letter spacing -->
+  <text
+    x="310"
+    y="148"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-size="72"
+    font-weight="700"
+    letter-spacing="18"
+    fill="url(#goldText)"
+  >VOID</text>
+
+  <!-- Thin gold divider line between VOID and STUDIO -->
+  <line x1="310" y1="162" x2="700" y2="162" stroke="#D4AF37" stroke-width="0.8" stroke-opacity="0.5"/>
+
+  <!-- "STUDIO" — smaller, white, wide letter spacing -->
+  <text
+    x="313"
+    y="186"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-size="22"
+    font-weight="400"
+    letter-spacing="14"
+    fill="#e8e8f0"
+    opacity="0.85"
+  >STUDIO</text>
+
+  <!-- ═══════════════════════════════════════
+       TAGLINE — below everything
+  ═══════════════════════════════════════ -->
+
+  <!-- Thin separator line -->
+  <line x1="132" y1="235" x2="700" y2="235" stroke="#D4AF37" stroke-width="0.5" stroke-opacity="0.2"/>
+
+  <!-- Tagline text -->
+  <text
+    x="200"
+    y="258"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-size="13"
+    font-weight="400"
+    letter-spacing="6"
+    fill="#D4AF37"
+    opacity="0.6"
+  >WE BUILD FROM THE VOID.</text>
+
+  <!-- ═══════════════════════════════════════
+       LOCATION MARK — subtle bottom detail
+  ═══════════════════════════════════════ -->
+  <text
+    x="200"
+    y="290"
+    font-family="'Courier New', Courier, monospace"
+    font-size="10"
+    letter-spacing="3"
+    fill="#44445a"
+  >KIGALI, RWANDA  //  GLOBAL</text>
+
+</svg>

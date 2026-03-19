@@ -5,7 +5,7 @@ import { Check } from "lucide-react";
 const tiers = [
   {
     name: "SURFACE",
-    price: "$500 – $800",
+    price: "$300 – $800",
     label: "For focused, well-defined projects",
     timeline: "2–3 weeks",
     popular: false,
@@ -21,7 +21,7 @@ const tiers = [
   },
   {
     name: "DEEP",
-    price: "$1,000 – $1,500",
+    price: "$900 – $1,500",
     label: "For complete product builds",
     timeline: "4–6 weeks",
     popular: true,
