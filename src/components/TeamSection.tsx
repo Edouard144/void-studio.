@@ -1,12 +1,17 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import teamEdouard from "@/assets/team-edouard.jpg";
+import teamTehila from "@/assets/team-tehila.jpg";
+import teamGeofrey from "@/assets/team-geofrey.jpg";
+import teamHerve from "@/assets/team-herve.jpg";
+import teamBright from "@/assets/team-bright.jpg";
 
 const team = [
-  { name: "TUYUBAHE Edouard", role: "Mobile & Backend Developer", tagline: "Architects the systems that power everything you see.", skills: "Node.js // Express.js // React Native // PostgreSQL" },
-  { name: "RUZINDANA Tehila", role: "Frontend Developer & Designer", tagline: "Transforms complex ideas into interfaces people love.", skills: "React.js // Next.js // Figma // Tailwind CSS" },
-  { name: "KAYINAMURA K. Geofrey", role: "Senior Backend Developer", tagline: "Engineers the infrastructure that never breaks.", skills: "Java // Spring Boot // PostgreSQL // System Design" },
-  { name: "NDIZEYE Herve", role: "Frontend, 3D & Design", tagline: "Brings the third dimension to every digital experience.", skills: "Three.js // Blender // React // UI/UX Design" },
-  { name: "SUN Bright", role: "DevOps & Cloud Engineer", tagline: "Ensures every system we build runs flawlessly at scale.", skills: "Docker // AWS // CI/CD // Linux // Kubernetes" },
+  { name: "TUYUBAHE Edouard", role: "Mobile & Backend Developer", tagline: "Architects the systems that power everything you see.", skills: "Node.js // Express.js // React Native // PostgreSQL", image: teamEdouard },
+  { name: "RUZINDANA Tehila", role: "Frontend Developer & Designer", tagline: "Transforms complex ideas into interfaces people love.", skills: "React.js // Next.js // Figma // Tailwind CSS", image: teamTehila },
+  { name: "KAYINAMURA K. Geofrey", role: "Senior Backend Developer", tagline: "Engineers the infrastructure that never breaks.", skills: "Java // Spring Boot // PostgreSQL // System Design", image: teamGeofrey },
+  { name: "NDIZEYE Herve", role: "Frontend, 3D & Design", tagline: "Brings the third dimension to every digital experience.", skills: "Three.js // Blender // React // UI/UX Design", image: teamHerve },
+  { name: "SUN Bright", role: "DevOps & Cloud Engineer", tagline: "Ensures every system we build runs flawlessly at scale.", skills: "Docker // AWS // CI/CD // Linux // Kubernetes", image: teamBright },
 ];
 
 const TeamSection = () => {
@@ -37,11 +42,8 @@ const TeamSection = () => {
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: 0.1 * i }}
             >
-              {/* Hexagonal avatar placeholder */}
-              <div className="w-20 h-20 mx-auto mb-4 border-2 border-primary/30 group-hover:border-primary rounded-full flex items-center justify-center transition-all duration-500 bg-surface">
-                <span className="font-display text-lg text-primary">
-                  {member.name.split(" ").map(n => n[0]).join("").slice(0, 2)}
-                </span>
+              <div className="w-20 h-20 mx-auto mb-4 border-2 border-primary/30 group-hover:border-primary rounded-full overflow-hidden transition-all duration-500">
+                <img src={member.image} alt={member.name} className="w-full h-full object-cover" />
               </div>
               <h3 className="font-display text-sm text-foreground tracking-wider">{member.name}</h3>
               <p className="font-mono-accent text-primary mt-1 text-[11px]">{member.role}</p>
