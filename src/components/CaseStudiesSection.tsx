@@ -10,7 +10,7 @@ const caseStudies = [
     solution: "Built a complete digital banking platform with automated loan processing, real-time wallet management, fraud detection algorithms, SMS notifications, and a full admin dashboard.",
     result: "100% elimination of manual record errors. Loan approval time reduced from days to minutes. Full audit trail on every transaction.",
     stack: "Express.js // PostgreSQL // React // TypeScript // JWT // Bcrypt",
-    timeline: "3 weeks",
+    timeline: "8 weeks (3 dev + 4 build + 1 test)",
   },
   {
     num: "02",
