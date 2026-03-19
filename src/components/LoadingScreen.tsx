@@ -6,12 +6,12 @@ const LoadingScreen = ({ onComplete }: { onComplete: () => void }) => {
 
   useEffect(() => {
     const timers = [
-      setTimeout(() => setPhase(1), 300),
-      setTimeout(() => setPhase(2), 1000),
-      setTimeout(() => setPhase(3), 1600),
-      setTimeout(() => setPhase(4), 2400),
+      setTimeout(() => setPhase(1), 700),
+      setTimeout(() => setPhase(2), 2000),
+      setTimeout(() => setPhase(3), 4000),
+      setTimeout(() => setPhase(4), 7000),
     ];
-    const done = setTimeout(onComplete, 2800);
+    const done = setTimeout(onComplete, 10000);
     return () => { timers.forEach(clearTimeout); clearTimeout(done); };
   }, [onComplete]);
 
