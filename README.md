@@ -143,9 +143,3 @@ src/
 ## License
 
 © 2026 Void Studio. All rights reserved. Built from the Void — Kigali, Rwanda.
-
----
-
-<p align="center">
-  <em>From Nothing. To Everything.</em>
-</p>
