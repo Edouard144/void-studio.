@@ -131,18 +131,6 @@ src/
 
 ---
 
-## Team
-
-| Name                      | Role                          | Specialization                          |
-| ------------------------- | ----------------------------- | --------------------------------------- |
-| **Kayinamura K. Geofrey** | Senior Backend Developer      | Springboot, PostgreSQL, Node.js, Python |
-| **Ndizeye Herve**         | Embedded Systems Architect    | Embedded Systems, Blender, UI/UX Design |
-| **Ruzindana Tehila**      | Frontend Developer & Designer | React.js, Next.js, Figma, Tailwind CSS  |
-| **Sun Bright**            | DevOps & Cloud Engineer       | Docker, AWS, CI/CD, Kubernetes          |
-| **Tuyubahe Edouard**      | Mobile & Backend Developer    | Node.js, React Native, Swift, WordPress |
-
----
-
 ## Contact
 
 - **Email**: [void.studio@gmail.com](mailto:void.studio@gmail.com)
